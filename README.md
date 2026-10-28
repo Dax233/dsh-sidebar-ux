@@ -48,12 +48,14 @@ DeepSeek Harness（DSH）Web 客户端侧边栏的轻量增强插件：**右键�
 本仓库即可运行的 bundle（无构建步骤，`node --check` 校验）。
 
 ```powershell
-# 装进当前 profile（示例为桌面端）
+# 从 GitHub 安装（推荐）
+dsh plugin --profile desktop add github:Dax233/dsh-sidebar-ux
+# 或本地开发目录
 dsh plugin --profile desktop add file:F:/github/dsh-sidebar-ux
-# 然后重启 DSH Desktop（客户端 bundle 在启动时扫描进 boot 清单）
+# 然后刷新页面（Ctrl+R）或重启 DSH Desktop
 ```
 
-或在 DSH「设置 → 插件」里安装该目录的绝对路径，重启后生效。卸载：
+或在 DSH「设置 → 插件」里安装该目录的绝对路径 / GitHub 地址，重启后生效。卸载：
 
 ```powershell
 dsh plugin --profile desktop remove @local/dsh-sidebar-ux
