@@ -1,0 +1,64 @@
+{
+  "name": "@local/dsh-sidebar-ux",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Sidebar UX for DeepSeek Harness: right-click menus on session and workspace rows, session drag-to-reference into the composer, and open a workspace in the file manager.",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "locale/*.json",
+    "icon.svg",
+    "tests/**"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-api-gateway",
+        "@deepseek-ai/dsh-api-remotes",
+        "@deepseek-ai/dsh-api-session-controller",
+        "@deepseek-ai/dsh-api-workspace-controller",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-workspace"
+      ]
+    }
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test tests/sidebar-ux.test.mjs"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "sidebar",
+    "context-menu",
+    "drag-and-drop"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dax233/dsh-sidebar-ux.git"
+  },
+  "homepage": "https://github.com/Dax233/dsh-sidebar-ux#readme",
+  "bugs": {
+    "url": "https://github.com/Dax233/dsh-sidebar-ux/issues"
+  }
+}

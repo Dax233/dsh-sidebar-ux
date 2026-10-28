@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Sidebar Context & Drag",
+    "description": "Right-click session and workspace rows to open their menus, drag a session into the composer to insert a session reference, and open a workspace in the file manager."
+  },
+  "menu.openInExplorer": "Open in File Explorer"
+}
